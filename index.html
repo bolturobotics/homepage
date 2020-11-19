@@ -5,12 +5,12 @@
 </head>
 <body>
 <h1>Boltu Prime</h1>
-<div>
+<div id="programdetails">
 <img src="images/boltu.png" />
 <p>Boltu Prime subscription costs $50 per year and comes with 10 free local delivery (up to 5 miles) in supported areas.</p>
 </div>
 
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<div id="signinbutton" class="g-signin2" data-onsuccess="onSignIn"></div>
 <div hidden id="usercontent">
   <div id="profile"></div>
   <div id="paypal-button-container"></div>
@@ -22,8 +22,7 @@
           shape: 'pill',
           color: 'silver',
           layout: 'vertical',
-          label: 'subscribe',
-          
+          label: 'subscribe',          
       },
       createSubscription: function(data, actions) {
         return actions.subscription.create({
@@ -37,8 +36,12 @@
 </script>
 
 <script lang="javascript">
-  function onSignIn(googleUser) {
-    var x = document.getElementById("usercontent");
+  function display(id, state) {
+    var item = document.getElementById(id);
+    item.style.display = state;
+  }
+
+  function onSignIn(googleUser) {    
     var profile = googleUser.getBasicProfile();
     var profileString = "";
 
@@ -50,9 +53,9 @@
     console.log(profileString);
     document.getElementById("profile").innerHTML = profileString;
 
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    }
+    display("usercontent", "block");
+    display("signinbutton", "none");
+    display("programdetails", "none");    
   }
 </script>
 </body>
