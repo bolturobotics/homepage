@@ -12,6 +12,7 @@
 
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 <div hidden id="usercontent">
+  <div id="profile"></div>
   <div id="paypal-button-container"></div>
 </div>
 <script src="https://www.paypal.com/sdk/js?client-id=AXMAAbltWsQ1PEsPVLJ-3T_DuePLPZICybv1kZwO6DDjFa6xS1BvY2rd81LEFoYX0_Qp3xxSrM1K8IBY&vault=true" data-sdk-integration-source="button-factory"></script>
@@ -36,11 +37,22 @@
 </script>
 
 <script lang="javascript">
-  function onSignIn() {
+  function onSignIn(googleUser) {
     var x = document.getElementById("usercontent");
+    var profile = googleUser.getBasicProfile();
+    var profileString = "";
+
+    profileString += '<div><img src="'+profile.getImageUrl() + '" /></div>'
+    profileString += '<p>ID: ' + profile.getId(); // Do not send to your backend! Use an ID token instead.
+    profileString += '<br />Name: ' + profile.getName();    
+    profileString += '<br />Email: ' + profile.getEmail() + "</p>"; // This is null if the 'email' scope is not present.
+  
+    console.log(profileString);
+    document.getElementById("profile").innerHTML = profileString;
+
     if (x.style.display === "none") {
       x.style.display = "block";
-    }    
+    }
   }
 </script>
 </body>
