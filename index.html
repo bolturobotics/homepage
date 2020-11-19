@@ -1,11 +1,19 @@
 <html>
+<head>  
+  <meta name="google-signin-client_id" content="414613983979-6jcpv1spaahiblh4vdj31080kfalh3i2.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>  
+</head>
 <body>
 <h1>Boltu Prime</h1>
 <div>
 <img src="images/boltu.png" />
 <p>Boltu Prime subscription costs $50 per year and comes with 10 free local delivery (up to 5 miles) in supported areas.</p>
 </div>
-<div id="paypal-button-container"></div>
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<div hidden id="usercontent">
+  <div id="paypal-button-container"></div>
+</div>
 <script src="https://www.paypal.com/sdk/js?client-id=AXMAAbltWsQ1PEsPVLJ-3T_DuePLPZICybv1kZwO6DDjFa6xS1BvY2rd81LEFoYX0_Qp3xxSrM1K8IBY&vault=true" data-sdk-integration-source="button-factory"></script>
 <script>
   paypal.Buttons({
@@ -25,5 +33,14 @@
         alert(data.subscriptionID);
       }
   }).render('#paypal-button-container');
+</script>
+
+<script lang="javascript">
+  function onSignIn() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    }    
+  }
 </script>
 </body>
