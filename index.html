@@ -43,12 +43,15 @@
 
   function onSignIn(googleUser) {    
     var profile = googleUser.getBasicProfile();
+    var id_token = googleUser.getAuthResponse().id_token;
     var profileString = "";
 
     profileString += '<div><img src="'+profile.getImageUrl() + '" /></div>'
     profileString += '<p>ID: ' + profile.getId(); // Do not send to your backend! Use an ID token instead.
     profileString += '<br />Name: ' + profile.getName();    
-    profileString += '<br />Email: ' + profile.getEmail() + "</p>"; // This is null if the 'email' scope is not present.
+    profileString += '<br />Email: ' + profile.getEmail(); // This is null if the 'email' scope is not present.
+    profileString += '<br /> Token: ' + id_token;
+    profileString += "</p>";
   
     console.log(profileString);
     document.getElementById("profile").innerHTML = profileString;
@@ -56,6 +59,7 @@
     display("usercontent", "block");
     display("signinbutton", "none");
     display("programdetails", "none");
+    
     enablePaypalButtons(); 
   }
 </script>
