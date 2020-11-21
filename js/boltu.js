@@ -49,7 +49,8 @@ function processToken(id_token) {
 function onLoadSubscriptions(subs) {
   console.log(subs);
   if (!subs || subs.length < 1) {
-    console.log("No subscriptions found");
+    console.log("No subscriptions found. Enabling paypal subscription buttons.");
+    enablePaypalButtons("P-09L75832VD5437626L5KRH4A", "paypal-button-container", onApprove);
   }
 }
 
@@ -74,6 +75,4 @@ function onSignIn(googleUser) {
   display("usercontent", "block");
   display("signinbutton", "none");
   display("programdetails", "none");
-
-  enablePaypalButtons("P-09L75832VD5437626L5KRH4A", "paypal-button-container", onApprove);
 }
