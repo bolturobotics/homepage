@@ -1,3 +1,7 @@
+function getApiEndpoint() {
+  return "https://11phycto36.execute-api.us-east-1.amazonaws.com/Prod";
+}
+
 function enablePaypalButtons(plan_id, container_id, onApprove, style) {
   if (!style) {
     style = {
@@ -30,7 +34,7 @@ var onApprove = function (data, actions) {
 
 function processToken(id_token) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://127.0.0.1:3000/subscription');
+  xhr.open('GET', getApiEndpoint() + '/subscription');
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.setRequestHeader('Authorization', id_token);
 
