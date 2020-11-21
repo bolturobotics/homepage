@@ -50,6 +50,7 @@ function onLoadSubscriptions(subs) {
   console.log(subs);
   if (!subs || subs.length < 1) {
     console.log("No subscriptions found. Enabling paypal subscription buttons.");
+    display("subscriptionprice", "block");
     enablePaypalButtons("P-09L75832VD5437626L5KRH4A", "paypal-button-container", onApprove);
   }
 }
