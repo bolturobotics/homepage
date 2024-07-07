@@ -8,7 +8,7 @@
     <incomingServer type="imap">
       <hostname>imap.bolturobotics.com</hostname>
       <port>993</port>
-      <socketType>STARTTLS</socketType>
+      <socketType>SSL</socketType>
       <authentication>password-encrypted</authentication>
       <username>%EMAILLOCALPART%</username>
     </incomingServer>    
