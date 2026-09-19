@@ -1,28 +1,197 @@
 <!doctype html>
-<html lang="en">  
-<head>    
+<html lang="en">
+<head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build a university autonomous mobile robotics lab with a working ROS 2 platform, structured curriculum, and instructor onboarding from Boltu Robotics.">
+  <title>Autonomous Mobile Robotics Lab — Boltu Robotics</title>
+  <link rel="canonical" href="https://bolturobotics.com/">
+  <link rel="preload" href="assets/modular-delivery-robot-v2.png" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="robotics-lab.css">
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Boltu Robotics</a>
-  </nav>
-  <h3>V 0.3</h3>
-  <img src="/images/v3.jpg" width="400" height="480" />
-  <p>Video is coming soon</p>
-  
-  <h3>V 0.2 </h3>
-  <div>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/LQcXNN6Wu04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <h3>V 0.1</h3>
- 
-  <a href="https://youtu.be/LQcXNN6Wu04">V 0.1 video on youtube</a>
-  
-  
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Boltu Robotics home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+      <span>Boltu Robotics<span class="brand-dot">.</span></span>
+    </a>
+    <nav aria-label="Program navigation">
+      <a href="#outcomes">Outcomes</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#labs">Lab package</a>
+      <a class="nav-button" href="#request-guide">Request program guide</a>
+    </nav>
+    <button class="menu-button" type="button" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <img src="assets/modular-delivery-robot-v2.png" alt="A modular autonomous mobile robot operating beside a university robotics laboratory">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid page-width">
+        <div class="hero-copy">
+          <p class="kicker">University teaching platform + applied curriculum</p>
+          <h1>Autonomous Mobile Robotics <em>Lab</em></h1>
+          <p class="hero-lead">Give students a functioning ROS 2 robot, then teach them to inspect, measure, modify, and improve every layer of its autonomy stack.</p>
+          <div class="hero-points" aria-label="Program highlights">
+            <span>Physical robot experiments</span>
+            <span>ROS 2 + Nav2 baseline</span>
+            <span>Open, replaceable subsystems</span>
+          </div>
+        </div>
+
+        <aside class="lead-card" id="request-guide">
+          <p class="form-eyebrow">Plan your lab</p>
+          <h2>Request the program guide</h2>
+          <p>Tell us about your institution. We’ll share the proposed lab configuration, curriculum outline, and pilot process.</p>
+          <form class="guide-form">
+            <div class="field-row">
+              <label>First name<input name="first_name" type="text" autocomplete="given-name" required></label>
+              <label>Last name<input name="last_name" type="text" autocomplete="family-name" required></label>
+            </div>
+            <label>University email<input name="email" type="email" autocomplete="email" placeholder="you@university.edu" required></label>
+            <label>Institution<input name="institution" type="text" autocomplete="organization" required></label>
+            <label>Your role
+              <select name="role" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Faculty or instructor</option>
+                <option>Department or program leader</option>
+                <option>Laboratory or research lead</option>
+                <option>Procurement or administration</option>
+                <option>Student team advisor</option>
+              </select>
+            </label>
+            <label>Primary interest
+              <select name="interest" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Teaching laboratory</option>
+                <option>Capstone program</option>
+                <option>Research platform</option>
+                <option>Campus delivery experiments</option>
+              </select>
+            </label>
+            <label class="consent"><input name="consent" type="checkbox" required><span>I agree that Boltu Robotics may contact me about this request. I can opt out at any time.</span></label>
+            <button type="submit">Request program guide <span>→</span></button>
+            <small>We use your information only to respond about Boltu Robotics programs.</small>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section class="fact-strip" aria-label="Program facts">
+      <div class="page-width facts">
+        <div><small>FORMAT</small><strong>On-campus, hands-on</strong></div>
+        <div><small>COURSE MODEL</small><strong>12-week adaptable sequence</strong></div>
+        <div><small>LAB RATIO</small><strong>1 robot / 3–5 students</strong></div>
+        <div><small>PLATFORM</small><strong>Ubuntu · ROS 2 · Nav2</strong></div>
+      </div>
+    </section>
+
+    <section class="overview section page-width" id="outcomes">
+      <div class="section-intro">
+        <p class="section-tag">Program overview</p>
+        <h2>Teach autonomy on a robot students can actually change.</h2>
+      </div>
+      <div class="overview-copy">
+        <p>Boltu Robotics combines a working autonomous mobile robot with a structured teaching package. Students begin by operating a known baseline, then trace data and decisions through sensing, state estimation, mapping, localization, planning, control, and safety.</p>
+        <p>The platform arrives with teleoperation, ROS 2 integration, mapping, localization, and Nav2 configured. That removes weeks of unreliable assembly while preserving the freedom to replace sensors, compute, motor control, algorithms, and payloads.</p>
+      </div>
+      <div class="outcome-grid">
+        <article><span>01</span><h3>Understand the system</h3><p>Inspect nodes, topics, actions, transforms, robot descriptions, hardware interfaces, and lifecycle behavior on a complete mobile robot.</p></article>
+        <article><span>02</span><h3>Measure the real world</h3><p>Calibrate odometry, characterize sensor noise, compare state estimates, quantify map quality, and evaluate navigation performance.</p></article>
+        <article><span>03</span><h3>Build dependable autonomy</h3><p>Configure localization and Nav2, design delivery missions, introduce failures deliberately, and implement safe recovery behavior.</p></article>
+        <article><span>04</span><h3>Modify with evidence</h3><p>Replace a subsystem, recalibrate the platform, and defend the engineering tradeoffs using repeatable physical experiments.</p></article>
+      </div>
+    </section>
+
+    <section class="learning section" id="curriculum">
+      <div class="page-width">
+        <div class="section-intro light">
+          <p class="section-tag">Suggested 12-week sequence</p>
+          <h2>From first motion to an autonomous delivery mission.</h2>
+          <p class="intro-note">Adopt the full sequence or integrate individual modules into an existing robotics course.</p>
+        </div>
+        <div class="module-list">
+          <details open><summary><span>Weeks 1–3</span><strong>Robot foundations</strong><i>+</i></summary><div><p>Start with laboratory safety and teleoperation, inspect the ROS 2 graph, validate URDF and transforms, and connect the differential-drive hardware through <code>ros2_control</code>.</p><ul><li>Safe startup, command timeouts, and emergency stopping</li><li>Nodes, topics, services, actions, URDF, Xacro, and tf2</li><li>CAN motor control, feedback, and drive limits</li></ul></div></details>
+          <details><summary><span>Weeks 4–5</span><strong>Odometry and state estimation</strong><i>+</i></summary><div><p>Turn real measurements into a defensible motion estimate using calibrated wheel parameters, an IMU, covariance modeling, and sensor fusion.</p><ul><li>Straight-line and rotation calibration</li><li>Error characterization and repeatable trials</li><li>Fused odometry with robot_localization</li></ul></div></details>
+          <details><summary><span>Weeks 6–8</span><strong>Mapping, localization, and Nav2</strong><i>+</i></summary><div><p>Create maps, test localization recovery, and tune global planning, local control, costmaps, and obstacle response in a physical environment.</p><ul><li>SLAM Toolbox and map-quality evaluation</li><li>AMCL confidence and displacement experiments</li><li>Planning and controller acceptance tests</li></ul></div></details>
+          <details><summary><span>Weeks 9–10</span><strong>Recovery and delivery behavior</strong><i>+</i></summary><div><p>Move beyond successful demos by testing blocked routes, retry limits, waypoint execution, pickup confirmation, arrival signaling, and return-to-home behavior.</p><ul><li>Nav2 behavior trees and recovery actions</li><li>Mission states and operator handoffs</li><li>Diagnostics, logs, and rosbag evidence</li></ul></div></details>
+          <details><summary><span>Weeks 11–12</span><strong>Open-ended experiments</strong><i>+</i></summary><div><p>Teams replace or extend one subsystem, restore calibrated operation, and present a reproducible autonomous mission with quantitative results.</p><ul><li>Depth perception or alternative sensors</li><li>Modified planning, control, or payload behavior</li><li>Technical demonstration and failure analysis</li></ul></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="included section page-width" id="labs">
+      <div class="section-intro">
+        <p class="section-tag">What your department receives</p>
+        <h2>A laboratory system—not just a mobile base.</h2>
+      </div>
+      <div class="included-grid">
+        <article><div class="line-icon">◇</div><h3>Working reference robot</h3><p>A two-powered-wheel differential-drive platform with passive rear caster support, documented connections, physical emergency stop, and an accessible modular deck.</p></article>
+        <article><div class="line-icon">⌁</div><h3>Supported ROS 2 baseline</h3><p>Robot description, drive integration, state estimation, SLAM, localization, Nav2, RViz views, diagnostics, and repeatable setup procedures.</p></article>
+        <article><div class="line-icon">▤</div><h3>Six core lab packages</h3><p>Instructor setup, student instructions, starter files, reference results, common failures, reset procedures, and grading rubrics.</p></article>
+        <article><div class="line-icon">↗</div><h3>Instructor onboarding</h3><p>Bring-up guidance, safety workflow, teaching preparation, and support for adapting the sequence to your course and facilities.</p></article>
+      </div>
+    </section>
+
+    <section class="audience section">
+      <div class="page-width audience-grid">
+        <div>
+          <p class="section-tag">Designed for</p>
+          <h2>Programs that want theory and hardware to meet.</h2>
+        </div>
+        <div class="audience-list">
+          <article><span>01</span><div><h3>Upper-level undergraduate courses</h3><p>Connect software, electrical, mechanical, control, and systems concepts through one shared platform.</p></div></article>
+          <article><span>02</span><div><h3>Graduate robotics programs</h3><p>Begin research from a documented reference system instead of repeatedly rebuilding infrastructure.</p></div></article>
+          <article><span>03</span><div><h3>Capstone teams</h3><p>Focus student effort on a meaningful new capability while retaining a reliable autonomy baseline.</p></div></article>
+          <article><span>04</span><div><h3>Continuing education</h3><p>Give working engineers direct experience diagnosing an integrated autonomous system.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="project section page-width">
+      <div class="project-panel">
+        <div>
+          <p class="section-tag">Final demonstration</p>
+          <h2>Prove more than “the robot moved.”</h2>
+          <p>Student teams complete a reproducible autonomous mission, quantify performance, document a failure, and explain the choices that produced their result.</p>
+        </div>
+        <ul>
+          <li>Navigate through multiple physical goals</li>
+          <li>Respond safely to a blocked route</li>
+          <li>Complete pickup, delivery, and return states</li>
+          <li>Present logs, measurements, and limitations</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="faq section page-width" id="faq">
+      <div class="section-intro"><p class="section-tag">Questions from faculty</p><h2>Program FAQs</h2></div>
+      <div class="faq-list">
+        <details><summary>Is this an online course?<i>+</i></summary><p>No. The proposed program is centered on supervised physical laboratory work at your institution. Simulation can prepare students for each exercise, but it does not replace robot time.</p></details>
+        <details><summary>Can we use our existing course material?<i>+</i></summary><p>Yes. The robot and labs are modular. Departments can use the complete suggested sequence or adopt only the hardware, software baseline, and selected exercises.</p></details>
+        <details><summary>What background should students have?<i>+</i></summary><p>Python or C++, basic Linux use, and introductory linear algebra are recommended. Prior exposure to probability or control is useful but can be reviewed within the course.</p></details>
+        <details><summary>Is the robot ready for unsupervised outdoor delivery?<i>+</i></summary><p>No. The first platform is intended for indoor and supervised dry-weather experiments. Outdoor autonomy, rain resistance, powered lockers, and fleet operations are later product stages.</p></details>
+        <details><summary>How many robots does a class need?<i>+</i></summary><p>A practical planning ratio is one robot for every three to five students, plus suitable test space, charging procedures, workstations, tools, and replacement parts.</p></details>
+        <details><summary>Can students change the hardware and software?<i>+</i></summary><p>That is a central design goal. Sensors, compute, control components, autonomy packages, and payloads have documented interfaces and are meant to support replacement experiments.</p></details>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="page-width">
+        <p class="section-tag">Pilot university labs</p>
+        <h2>Build a robotics course around a platform worth investigating.</h2>
+        <a href="#request-guide">Request the program guide <span>↑</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>Boltu Robotics<span class="brand-dot">.</span></span></a>
+    <p>Open robotics education, from first motion to field research.</p>
+    <div><a href="https://bolturobotics.com/">bolturobotics.com</a><br>© 2026 Boltu Robotics</div>
+  </footer>
+  <div class="toast" role="status" aria-live="polite">Thank you. Your program-guide request has been recorded.</div>
+  <script src="robotics-lab.js"></script>
 </body>
 </html>
